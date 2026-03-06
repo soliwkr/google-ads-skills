@@ -1,0 +1,46 @@
+{
+  "name": "google-ads-skills",
+  "owner": {
+    "name": "John Williams",
+    "email": "itallstartedwithaidea@gmail.com"
+  },
+  "metadata": {
+    "description": "Google Ads agent skills for Claude — campaign analysis, account auditing, safe write operations, PPC math, and MCP server integration",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "google-ads-full",
+      "description": "Complete Google Ads agent skills suite including analysis, auditing, write operations with CEP safety protocol, PPC math calculations, and MCP server configuration for live API access",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/google-ads-analysis",
+        "./skills/google-ads-audit",
+        "./skills/google-ads-write",
+        "./skills/google-ads-math",
+        "./skills/google-ads-mcp"
+      ]
+    },
+    {
+      "name": "google-ads-readonly",
+      "description": "Read-only Google Ads skills — analysis, auditing, and math calculations without write access",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/google-ads-analysis",
+        "./skills/google-ads-audit",
+        "./skills/google-ads-math"
+      ]
+    },
+    {
+      "name": "google-ads-mcp-only",
+      "description": "MCP server configuration skill for connecting Claude to Google Ads API",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/google-ads-mcp"
+      ]
+    }
+  ]
+}
